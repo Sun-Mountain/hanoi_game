@@ -5,6 +5,10 @@
 $pink: #e91e63;
 $purple: #673ab7;
 $blue: #0074d9;
+$light-blue: #27cadf;
+$periwinkle: #a786f5;
+$light-pink: #f496b6;
+$red: #bb1907;
 $lime: #15ff00;
 $white: #ffffff;
 $black: #000000;
@@ -31,19 +35,20 @@ h4 {
 }
 
 .tower {
+    margin: 10px;
     width: 125px;
     height: 91px;
     border: 1px solid $black;
-    margin: 0 4%;
     position: relative;
     display: flex;
     flex-direction: column-reverse;
 }
 
 .disk {
+    content: '';
 	list-style: none;
 	height: 20px;
-	display: block;
+    display: block;
 	font-size: 0;
 	&.hold {
 		background-color: $lime;
@@ -59,6 +64,6 @@ h4 {
 			background-color: $purple;
 		} @else if $i == 3 {
 			background-color: $blue;
-		}
-	}
+	    }
+    }
 }

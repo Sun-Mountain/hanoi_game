@@ -7,21 +7,21 @@
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
 
-	// Variables
-	var holding = [],
-		disksNum = 3,
-		$board = $('.board'),
-		$restart = $board.find('.restart'),
-		$tower = $board.find('.tower');
+// Variables
+var holding = [],
+	disksNum = 3,
+	$board = $('.board'),
+	$restart = $board.find('.restart'),
+	$tower = $board.find('.tower');
 
-	// Init Game
-	function initGame(tower) {
-		$tower.html('');
-		holding = [];
-		for (var i = 1; i <= disksNum; i++) {
-			tower.prepend($('<li class="disk disk-' + i + '" data-value="' + i + '"></li>'));
-		}
+// Start Game
+function gameStart(tower) {
+	$tower.html('');
+	holding = [];
+	for (var i = 1; i <= disksNum; i++) {
+	tower.prepend($('<li class="disk disk-' + i + '" data-value="' + i + '"></li>'));
 	}
-	
-	initGame($tower.eq(0));
+}
+
+gameStart($tower.eq(0));
 

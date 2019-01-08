@@ -9906,16 +9906,17 @@ h4 {
 }
 
 .tower {
+  margin: 10px;
   width: 125px;
   height: 91px;
   border: 1px solid #000000;
-  margin: 0 4%;
   position: relative;
   display: flex;
   flex-direction: column-reverse;
 }
 
 .disk {
+  content: "";
   list-style: none;
   height: 20px;
   display: block;
