@@ -9945,7 +9945,6 @@ p {
   width: 135px;
   height: 90px;
   border-bottom: 5px solid #000000;
-  border-radius: 5px;
   position: relative;
   text-align: center;
   padding: 0;
@@ -9961,32 +9960,22 @@ ul {
   bottom: 0;
 }
 
-.disk {
+.disc {
   list-style: none;
-  height: 16px;
+  height: 30px;
   display: block;
-  border-radius: 9px;
   font-size: 0;
   z-index: 20;
 }
-.disk.hold {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
+.disc#d1 {
+  width: 70px;
+  background: #e91e63;
 }
-
-.disk-1 {
-  width: 17.5px;
-  background-color: #e91e63;
+.disc#d2 {
+  width: 90px;
+  background: #673ab7;
 }
-
-.disk-2 {
-  width: 35px;
-  background-color: #673ab7;
-}
-
-.disk-3 {
-  width: 52.5px;
-  background-color: #3f51b5;
+.disc#d3 {
+  width: 110px;
+  background: #0074d9;
 }

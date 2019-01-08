@@ -15,7 +15,3 @@ var $tower = $('.tower'),
     $final = $('#t3')
 
 // game init
-
-$tower.click(function(){
-    $tower.prepend('#disc1')
-})
