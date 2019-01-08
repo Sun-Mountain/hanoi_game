@@ -10,9 +10,17 @@ html(lang="en")
         .container-Prime
             h1 Tower of Hanoi
             h4 Directions
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, voluptate omnis! Quaerat officia nulla iste! Similique cum, architecto, consequatur repellendus cumque eligendi numquam eveniet minus fugit pariatur molestias minima quos.
+            p Move the discs from 1 to 3, largest to smallest.
                 .board
                     ul.tower#t1
+                        .li.disc.disc1
+                        .li.disc.disc2
+                        .li.disc.disc3
                     ul.tower#t2
                     ul.tower#t3
+                .row.num
+                    p 1
+                    p 2
+                    p 3
     script(src="../js/main.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
