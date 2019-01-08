@@ -9890,9 +9890,14 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h4 {
+  text-transform: uppercase;
+}
+
 .container {
   width: 900px;
   align-items: center;
+  text-align: center;
 }
 
 .board {
@@ -9904,4 +9909,33 @@ a.text-dark:hover, a.text-dark:focus {
   width: 125px;
   height: 91px;
   border: 1px solid #000000;
+  margin: 0 4%;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.disk {
+  list-style: none;
+  height: 20px;
+  display: block;
+  font-size: 0;
+}
+.disk.hold {
+  background-color: #15ff00;
+}
+
+.disk-1 {
+  width: 17.5px;
+  background-color: #e91e63;
+}
+
+.disk-2 {
+  width: 35px;
+  background-color: #673ab7;
+}
+
+.disk-3 {
+  width: 52.5px;
+  background-color: #0074d9;
 }

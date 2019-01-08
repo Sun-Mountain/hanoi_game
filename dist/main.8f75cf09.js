@@ -112,20 +112,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // Bonus:
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
-// list variables
-var onDeck = [],
-    discNum = 3,
+// Variables
+var holding = [],
+    disksNum = 3,
     $board = $('.board'),
-    $tower = $board.find('.tower');
-var disc1 = document.querySelector('#d1'); // console.log($board)
-// console.log($tower)
-// game init
+    $restart = $board.find('.restart'),
+    $tower = $board.find('.tower'); // Init Game
 
-disc1.addEventListener('click', onDeck);
+function initGame(tower) {
+  $tower.html('');
+  holding = [];
 
-function onDeck() {
-  document.body.style.backgroundColor = $lime;
+  for (var i = 1; i <= disksNum; i++) {
+    tower.prepend($('<li class="disk disk-' + i + '" data-value="' + i + '"></li>'));
+  }
 }
+
+initGame($tower.eq(0));
 },{}],"../../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -153,7 +156,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54888" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54963" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

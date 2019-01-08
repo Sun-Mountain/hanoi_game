@@ -7,22 +7,21 @@
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
 
-// list variables
+	// Variables
+	var holding = [],
+		disksNum = 3,
+		$board = $('.board'),
+		$restart = $board.find('.restart'),
+		$tower = $board.find('.tower');
 
-var onDeck = [],
-    discNum = 3,
-    $board = $('.board'),
-    $tower = $board.find('.tower')
-
-const disc1 = document.querySelector('#d1')
-
-// console.log($board)
-// console.log($tower)
-
-// game init
-
-disc1.addEventListener('click', onDeck)
-function onDeck() {
-    document.body.style.backgroundColor = $lime;
-}
+	// Init Game
+	function initGame(tower) {
+		$tower.html('');
+		holding = [];
+		for (var i = 1; i <= disksNum; i++) {
+			tower.prepend($('<li class="disk disk-' + i + '" data-value="' + i + '"></li>'));
+		}
+	}
+	
+	initGame($tower.eq(0));
 

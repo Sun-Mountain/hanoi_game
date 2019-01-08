@@ -15,9 +15,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h4 {
+    text-transform: uppercase;
+}
+
 .container {
     width: 900px;
     align-items: center;
+    text-align: center;
 }
 
 .board {
@@ -29,5 +34,31 @@ body {
     width: 125px;
     height: 91px;
     border: 1px solid $black;
+    margin: 0 4%;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
+.disk {
+	list-style: none;
+	height: 20px;
+	display: block;
+	font-size: 0;
+	&.hold {
+		background-color: $lime;
+	}
+}
+
+@for $i from 1 through 3 {
+	.disk-#{$i} {
+		width: 35px * $i / 2;
+		@if $i == 1 {
+			background-color: $pink;
+		} @else if $i == 2 {
+			background-color: $purple;
+		} @else if $i == 3 {
+			background-color: $blue;
+		}
+	}
+}
