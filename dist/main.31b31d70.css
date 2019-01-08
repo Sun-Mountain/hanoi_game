@@ -9971,11 +9971,20 @@ ul {
   width: 70px;
   background: #e91e63;
 }
+.disc#d1.hold {
+  background: #15ff00;
+}
 .disc#d2 {
   width: 90px;
   background: #673ab7;
 }
+.disc#d2.hold {
+  background: #15ff00;
+}
 .disc#d3 {
   width: 110px;
   background: #0074d9;
+}
+.disc#d3.hold {
+  background: #15ff00;
 }

@@ -9,9 +9,12 @@
 
 // list variables
 
-var $tower = $('.tower'),
-    $t1 = $('#t1'),
-    $t2 = $('#t2'),
-    $final = $('#t3')
+var onDeck = [],
+    discNum = 3,
+    $board = $('.board'),
+    $tower = $board.find('.tower')
 
+
+console.log($board)
+console.log($tower)
 // game init

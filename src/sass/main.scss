@@ -5,6 +5,7 @@
 $pink: #e91e63;
 $purple: #673ab7;
 $blue: #0074d9;
+$lime: #15ff00;
 $white: #ffffff;
 $black: #000000;
 
@@ -96,15 +97,24 @@ ul {
     &#d1 {
         width: 70px;
         background: $pink;
+        &.hold {
+            background: $lime;
+        }
     }
 
     &#d2 {
         width: 90px;
         background: $purple;
+        &.hold {
+            background: $lime;
+        }
     }
 
     &#d3 {
         width: 110px;
         background: $blue;
+        &.hold {
+            background: $lime;
+        }
     }
 }
