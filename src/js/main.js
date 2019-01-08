@@ -14,7 +14,15 @@ var onDeck = [],
     $board = $('.board'),
     $tower = $board.find('.tower')
 
+const disc1 = document.querySelector('#d1')
 
-console.log($board)
-console.log($tower)
+// console.log($board)
+// console.log($tower)
+
 // game init
+
+disc1.addEventListener('click', onDeck)
+function onDeck() {
+    document.body.style.backgroundColor = $lime;
+}
+
