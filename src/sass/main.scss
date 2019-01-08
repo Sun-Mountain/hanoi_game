@@ -94,17 +94,17 @@ ul {
     font-size: 0;
     z-index: 20;
 
-    &.disc1 {
+    &#disc1 {
         width: 70px;
         background: $green;
     }
 
-    &.disc2 {
+    &#disc2 {
         width: 90px;
         background: $pink;
     }
 
-    &.disc3 {
+    &#disc3 {
         width: 110px;
         background: $purple;
     }

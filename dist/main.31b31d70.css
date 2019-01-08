@@ -9969,15 +9969,15 @@ ul {
   font-size: 0;
   z-index: 20;
 }
-.disc.disc1 {
+.disc#disc1 {
   width: 70px;
   background: #659933;
 }
-.disc.disc2 {
+.disc#disc2 {
   width: 90px;
   background: #963254;
 }
-.disc.disc3 {
+.disc#disc3 {
   width: 110px;
   background: #3C3176;
 }
