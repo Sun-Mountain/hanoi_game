@@ -105,15 +105,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"../js/main.js":[function(require,module,exports) {
-// set up - variables
-var $tower = document.getElementsByClassName('tower'); // click event - move from one pole to another
+// Game must:
+// [ ] Only one disc moved at a time 
+// [ ] Every move takes top disc from one stack and places on top of another
+// [ ] No disc can be put on top of a smaller disc
+// Bonus:
+// [ ] Time based scoring
+// [ ] Track scores across games (even when reloading)
+// list variables
+var $board = $('.board'),
+    $tower = $board.find('.tower'),
+    $t1 = $('#t1'),
+    $t2 = $('#t2'),
+    $final = $('#t3');
+var hanoi = {
+  rings: 3,
+  moves: 0 // game init
 
-$(init);
-
-function init() {
-  // Move the disc from #t1 to #t2 and #t3
-  $('#t2, #t3').append($('#t1>#disc1'));
-} // win scenario
+};
+$tower.click(function () {
+  $tower.prepend('#disc1');
+});
 },{}],"../../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -141,7 +153,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50174" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57502" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

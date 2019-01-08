@@ -1,16 +1,28 @@
-// set up - variables
+// Game must:
+// [ ] Only one disc moved at a time 
+// [ ] Every move takes top disc from one stack and places on top of another
+// [ ] No disc can be put on top of a smaller disc
 
-var $tower = document.getElementsByClassName('tower')
+// Bonus:
+// [ ] Time based scoring
+// [ ] Track scores across games (even when reloading)
 
-// click event - move from one pole to another
+// list variables
 
-$( init );
+var $board = $('.board'),
+    $tower = $board.find('.tower'),
+    $t1 = $('#t1'),
+    $t2 = $('#t2'),
+    $final = $('#t3')
 
-function init() {
+var hanoi = {
+    rings: 3,
+    moves: 0,
 
- // Move the disc from #t1 to #t2 and #t3
-  $('#t2, #t3').append( $('#t1>#disc1') );
 }
 
+// game init
 
-// win scenario
+$tower.click(function(){
+    $tower.prepend('#disc1')
+})

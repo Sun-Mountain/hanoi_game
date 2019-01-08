@@ -9909,7 +9909,7 @@ p {
   text-align: center;
 }
 
-.container-Prime {
+.container {
   margin: 0 auto;
   margin-top: 10px;
   min-width: 300px;
@@ -9944,7 +9944,7 @@ p {
 .tower {
   width: 135px;
   height: 90px;
-  border-bottom: 5px solid #000;
+  border-bottom: 5px solid #000000;
   border-radius: 5px;
   position: relative;
   text-align: center;
