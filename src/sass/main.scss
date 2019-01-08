@@ -57,7 +57,7 @@ h4 {
 
 @for $i from 1 through 3 {
 	.disk-#{$i} {
-		width: 35px * $i / 2;
+		width: 10px * $i * 2;
 		@if $i == 1 {
 			background-color: $pink;
 		} @else if $i == 2 {
