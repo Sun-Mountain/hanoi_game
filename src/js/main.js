@@ -9,17 +9,10 @@
 
 // list variables
 
-var $board = $('.board'),
-    $tower = $board.find('.tower'),
+var $tower = $('.tower'),
     $t1 = $('#t1'),
     $t2 = $('#t2'),
     $final = $('#t3')
-
-var hanoi = {
-    rings: 3,
-    moves: 0,
-
-}
 
 // game init
 

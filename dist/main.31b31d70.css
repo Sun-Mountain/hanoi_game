@@ -9961,23 +9961,32 @@ ul {
   bottom: 0;
 }
 
-.disc {
+.disk {
   list-style: none;
-  height: 30px;
+  height: 16px;
   display: block;
   border-radius: 9px;
   font-size: 0;
   z-index: 20;
 }
-.disc#disc1 {
-  width: 70px;
-  background: #659933;
+.disk.hold {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.disc#disc2 {
-  width: 90px;
-  background: #963254;
+
+.disk-1 {
+  width: 17.5px;
+  background-color: #e91e63;
 }
-.disc#disc3 {
-  width: 110px;
-  background: #3C3176;
+
+.disk-2 {
+  width: 35px;
+  background-color: #673ab7;
+}
+
+.disk-3 {
+  width: 52.5px;
+  background-color: #3f51b5;
 }

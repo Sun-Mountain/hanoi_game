@@ -113,16 +113,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
 // list variables
-var $board = $('.board'),
-    $tower = $board.find('.tower'),
+var $tower = $('.tower'),
     $t1 = $('#t1'),
     $t2 = $('#t2'),
-    $final = $('#t3');
-var hanoi = {
-  rings: 3,
-  moves: 0 // game init
+    $final = $('#t3'); // game init
 
-};
 $tower.click(function () {
   $tower.prepend('#disc1');
 });
@@ -153,7 +148,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57502" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49676" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

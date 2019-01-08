@@ -2,12 +2,16 @@
 
 // colors
 
-$pink: #963254;
-$purple: #3C3176;
-$yellow: #AA9339;
-$green: #659933;
+$pink: #e91e63;
+$deep-purple: #673ab7;
+$indigo: #3f51b5;
+$cyan: #00bcd4;
+$light-green: #8bc34a;
+$yellow: #ffeb3b;
+$amber: #ffc107;
+$orange: #ff9800;
+$white: #ffffff;
 $black: #000000;
-$white: #FFFFFF;
 
 body {
     margin: 0 auto;
@@ -88,26 +92,54 @@ ul {
     bottom: 0;
 }
 
-.disc {
+// .disc {
+// 	list-style: none;
+//     height: 30px;
+//     display: block;
+//     border-radius: 9px;
+//     font-size: 0;
+//     z-index: 20;
+
+//     &#disc1 {
+//         width: 70px;
+//         background: $green;
+//     }
+
+//     &#disc2 {
+//         width: 90px;
+//         background: $pink;
+//     }
+
+//     &#disc3 {
+//         width: 110px;
+//         background: $purple;
+//     }
+// }
+
+.disk {
 	list-style: none;
-    height: 30px;
-    display: block;
-    border-radius: 9px;
-    font-size: 0;
-    z-index: 20;
+	height: 16px;
+	display: block;
+	border-radius: 9px;
+	font-size: 0;
+	z-index: 20;
+	&.hold {
+		position: absolute;
+		top: -50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
 
-    &#disc1 {
-        width: 70px;
-        background: $green;
-    }
-
-    &#disc2 {
-        width: 90px;
-        background: $pink;
-    }
-
-    &#disc3 {
-        width: 110px;
-        background: $purple;
-    }
+@for $i from 1 through 3 {
+	.disk-#{$i} {
+		width: 35px * $i / 2;
+		@if $i == 1 {
+			background-color: $pink;
+		} @else if $i == 2 {
+			background-color: $deep-purple;
+		} @else if $i == 3 {
+			background-color: $indigo;
+		}
+	}
 }
