@@ -9940,7 +9940,6 @@ button:hover {
 .disc {
   content: "";
   justify-content: center;
-  padding: 0 0 0 -50px;
   list-style: none;
   height: 20px;
   display: block;
