@@ -10,37 +10,60 @@
 $(document).ready(function() {
 
 // Variables
-var discNum = 3,
+var deck = [],
+    discNum = 3,
 	$board = $('.board'),
     $tower = $board.find('.tower');
 
-// Increase/Decrease discNum
+// Increase/Decrease discNum (not working?)
 
-$('#add').click(function (e) {
-    e.preventDefault();
-    discNum++;
-});
+$('.ad').click(function() {
+    discNum++
+    console.log(discNum)
+})
+
+$('.sub').click(function() {
+    discNum--
+    console.log(discNum)
+})
 
 // Start Game
 function gameStart(tower) {
 	$tower.html('');
 	for (i = 1; i <= discNum; i++) {
 	tower.prepend($('<li class="disc disc-' + i + '" data-value="' + i + '"></li>'));
-
     }
 }
 
 gameStart($tower.eq(0));
 
+// Logic
+
+function tower(tower) {
+    var $top = tower.find(':last-child'),
+        topDiskValue = $top.data('value'),
+        $onDeck = $board.find('.hold');
+
+    if ($onDeck.length !== 0) {
+        if (topDiskValue === deck[0]) {
+            $onDeck.removeClass('hold');
+        }
+    } else if ($top.length !== 0) {
+        $top.addClass('hold');
+    }
+
+    console.log(topDiskValue)
+}
+
 // Click Events Ahoy
 
 $board.on('click', '.tower', function(){
-    var $this = $(this)
-    tower($this)
+    var $x = $(this)
+    tower($x)
 })
 
 $('.reset').click(function() {
-    location.reload()
+    gameStart($tower.eq(0));
 })
 
 })

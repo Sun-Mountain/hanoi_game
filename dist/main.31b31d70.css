@@ -9890,8 +9890,16 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  padding: 20px 0;
+}
+
 h4 {
   text-transform: uppercase;
+}
+
+p {
+  padding: 0 40px;
 }
 
 .container {
@@ -9908,8 +9916,9 @@ h4 {
 .tower {
   margin: 20px;
   min-width: 200px;
-  min-height: 90px;
-  border: 1px solid #000000;
+  min-height: 210px;
+  background-color: #eeeeee;
+  border-bottom: 3px solid #000000;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -9948,30 +9957,30 @@ button:hover {
 
 .disc-2 {
   width: 30px;
-  background-color: #673ab7;
+  background-color: #e91e63;
 }
 
 .disc-3 {
   width: 45px;
-  background-color: #0074d9;
+  background-color: #e91e63;
 }
 
 .disc-4 {
   width: 60px;
-  background-color: #00d974;
+  background-color: #e91e63;
 }
 
 .disc-5 {
   width: 75px;
-  background-color: #d9b800;
+  background-color: #e91e63;
 }
 
 .disc-6 {
   width: 90px;
-  background-color: #d95300;
+  background-color: #e91e63;
 }
 
 .disc-7 {
   width: 105px;
-  background-color: #d90053;
+  background-color: #e91e63;
 }
