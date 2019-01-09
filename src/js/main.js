@@ -7,38 +7,26 @@
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
 
+$(document).ready(function() {
+
 // Variables
-var holding = [],
-	disksNum = 3,
+var discNum = 3,
 	$board = $('.board'),
-	$restart = $board.find('.restart'),
-	$tower = $board.find('.tower');
+    $tower = $board.find('.tower');
+
+// Increase/Decrease discNum
+
+$('#add').click(function (e) {
+    e.preventDefault();
+    discNum++;
+});
 
 // Start Game
 function gameStart(tower) {
 	$tower.html('');
-	holding = [];
-	for (var i = 1; i <= disksNum; i++) {
-	tower.prepend($('<li class="disk disk-' + i + '" data-value="' + i + '"></li>'));
-	}
-}
+	for (i = 1; i <= discNum; i++) {
+	tower.prepend($('<li class="disc disc-' + i + '" data-value="' + i + '"></li>'));
 
-function tower(tower) {
-    var $topDisk = tower.find(':last-child'),
-        topDiskValue = $topDisk.data('value'),
-        $holdingDisk = $board.find('.hold');
-
-    if ($holdingDisk.length !== 0) {
-        if (topDiskValue === holding[0]) {
-            $holdingDisk.removeClass('hold');
-        } else if (topDiskValue === undefined || topDiskValue > holding[0]) {
-            $holdingDisk.remove();
-            tower.append($('<li class="disk disk-' + holding[0] + '" data-value="' + holding[0] + '"></li>'));
-            countMove();
-        }
-    } else if ($topDisk.length !== 0) {
-        $topDisk.addClass('hold');
-        holding[0] = topDiskValue;
     }
 }
 
@@ -51,3 +39,8 @@ $board.on('click', '.tower', function(){
     tower($this)
 })
 
+$('.reset').click(function() {
+    location.reload()
+})
+
+})

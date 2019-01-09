@@ -112,46 +112,34 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // Bonus:
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
-// Variables
-var holding = [],
-    disksNum = 3,
-    $board = $('.board'),
-    $restart = $board.find('.restart'),
-    $tower = $board.find('.tower'); // Start Game
+$(document).ready(function () {
+  // Variables
+  var discNum = 3,
+      $board = $('.board'),
+      $tower = $board.find('.tower'); // Increase/Decrease discNum
 
-function gameStart(tower) {
-  $tower.html('');
-  holding = [];
+  $('#add').click(function (e) {
+    e.preventDefault();
+    discNum++;
+  }); // Start Game
 
-  for (var i = 1; i <= disksNum; i++) {
-    tower.prepend($('<li class="disk disk-' + i + '" data-value="' + i + '"></li>'));
-  }
-}
+  function gameStart(tower) {
+    $tower.html('');
 
-function tower(tower) {
-  var $topDisk = tower.find(':last-child'),
-      topDiskValue = $topDisk.data('value'),
-      $holdingDisk = $board.find('.hold');
-
-  if ($holdingDisk.length !== 0) {
-    if (topDiskValue === holding[0]) {
-      $holdingDisk.removeClass('hold');
-    } else if (topDiskValue === undefined || topDiskValue > holding[0]) {
-      $holdingDisk.remove();
-      tower.append($('<li class="disk disk-' + holding[0] + '" data-value="' + holding[0] + '"></li>'));
-      countMove();
+    for (i = 1; i <= discNum; i++) {
+      tower.prepend($('<li class="disc disc-' + i + '" data-value="' + i + '"></li>'));
     }
-  } else if ($topDisk.length !== 0) {
-    $topDisk.addClass('hold');
-    holding[0] = topDiskValue;
   }
-}
 
-gameStart($tower.eq(0)); // Click Events Ahoy
+  gameStart($tower.eq(0)); // Click Events Ahoy
 
-$board.on('click', '.tower', function () {
-  var $this = $(this);
-  tower($this);
+  $board.on('click', '.tower', function () {
+    var $this = $(this);
+    tower($this);
+  });
+  $('.reset').click(function () {
+    location.reload();
+  });
 });
 },{}],"../../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -180,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56264" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57934" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
