@@ -157,14 +157,16 @@ $(document).ready(function () {
       if (selectedDiscId === deck[0]) {
         // deselect disk 
         $onDeck.removeClass("hold"); // else if selectedDisc is < last child in new tower
-      } else if (selectedDiscId < $smallest) {
+      } else if (selectedDiscId === undefined) {
         // remove disc from original tower
-        $onDeck.removeClass("hold");
-        $onDeck.remove(); // if selected disc is smaller than top disc in the destination tower
+        $onDeck.removeClass("hold"); // if selected disc is smaller than top disc in the destination tower
         // recreate identical disc in new tower 
 
-        tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'));
-      }
+        for (i = 1; i <= discNum; i++) {
+          tower.prepend($('<li class="disc disc-' + i + '" data-value="' + i + '"></li>'));
+        }
+      } //if no disc is selected
+
     } else if ($smallest.length !== 0) {
       $smallest.addClass("hold");
       deck[0] = selectedDiscId;
@@ -208,7 +210,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49674" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50549" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

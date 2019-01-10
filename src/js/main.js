@@ -59,14 +59,18 @@ $(document).ready(function() {
         // deselect disk 
         $onDeck.removeClass("hold"); 
         // else if selectedDisc is < last child in new tower
-      } else if (selectedDiscId < $smallest) {
+      } else if (selectedDiscId === undefined) {
           // remove disc from original tower
           $onDeck.removeClass("hold");
-          $onDeck.remove()
           // if selected disc is smaller than top disc in the destination tower
           // recreate identical disc in new tower 
-				  tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'));
+				  for (i = 1; i <= discNum; i++) {
+            tower.prepend(
+              $('<li class="disc disc-' + i + '" data-value="' + i + '"></li>')
+            );}
       }
+
+      //if no disc is selected
     } else if ($smallest.length !== 0) {
       $smallest.addClass("hold");
       deck[0] = selectedDiscId;
