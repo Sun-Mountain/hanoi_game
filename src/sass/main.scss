@@ -51,6 +51,8 @@ p {
     border-bottom: 3px solid $black;
     display: flex;
     flex-direction: column-reverse;
+    padding: 0;
+    align-items: center;
 }
 
 button {
@@ -82,7 +84,7 @@ button {
 
 @for $i from 1 through 7 {
 	.disc-#{$i} {
-		width: 30px * $i / 2;
+		width: 15px * $i;
         background-color: $pink;
     }
 }
