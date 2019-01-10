@@ -15,7 +15,7 @@ $(document).ready(function() {
       $tower = $board.find(".tower");
 
   // Start Game
-  function gameStart(tower) {
+  function buildTower(tower) {
     $tower.html("");
     for (i = 1; i <= discNum; i++) {
       tower.prepend(
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
   //Create Game
 
-  gameStart($tower.eq(0));
+  buildTower($tower.eq(0));
 
   // Logic
 
@@ -54,24 +54,24 @@ $(document).ready(function() {
 
     /* If there is a disc to be selected */
     if ($onDeck.length !== 0) { 
-      /* If selected a disc */
-      if (selectedDiscId === deck[0]) { 
-        $onDeck.removeClass("hold"); /* deselecting a disc */
-        // console.log(tower)
-      } else if (selectedDiscId < /* select board/tower/id last child */ ) { /* evaluates parameter's value */
+        // if there is a disc already selected
+      if (selectedDiscId === deck[0]) {
+        // deselect disk 
+        $onDeck.removeClass("hold"); 
+        // else if selectedDisc is < last child in new tower
+      } else if (selectedDiscId < $smallest) {
           // remove disc from original tower
-          // console.log($smallest)
-          // console.log(selectedDiscId)
-          $smallest.remove()
-          console.log($smallest)
+          $onDeck.removeClass("hold");
+          $onDeck.remove()
           // if selected disc is smaller than top disc in the destination tower
           // recreate identical disc in new tower 
+				  tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'));
       }
     } else if ($smallest.length !== 0) {
       $smallest.addClass("hold");
-      selectedDiscId = deck[0];
+      deck[0] = selectedDiscId;
 
-      console.log(tower)
+      console.log(deck[0])
     }
   }
 
@@ -83,6 +83,6 @@ $(document).ready(function() {
   });
 
   $(".reset").click(function() {
-    gameStart($tower.eq(0));
+    buildTower($tower.eq(0));
   });
 });

@@ -119,7 +119,7 @@ $(document).ready(function () {
       $board = $(".board"),
       $tower = $board.find(".tower"); // Start Game
 
-  function gameStart(tower) {
+  function buildTower(tower) {
     $tower.html("");
 
     for (i = 1; i <= discNum; i++) {
@@ -141,7 +141,7 @@ $(document).ready(function () {
     }
   }); //Create Game
 
-  gameStart($tower.eq(0)); // Logic
+  buildTower($tower.eq(0)); // Logic
 
   function play(tower) {
     var $disc = tower.children(),
@@ -153,24 +153,22 @@ $(document).ready(function () {
     /* If there is a disc to be selected */
 
     if ($onDeck.length !== 0) {
-      /* If selected a disc */
+      // if there is a disc already selected
       if (selectedDiscId === deck[0]) {
-        $onDeck.removeClass("hold");
-        /* deselecting a disc */
-        // console.log(tower)
-      } else if (selectedDiscId < tower) {
-        /* evaluates parameter's value */
+        // deselect disk 
+        $onDeck.removeClass("hold"); // else if selectedDisc is < last child in new tower
+      } else if (selectedDiscId < $smallest) {
         // remove disc from original tower
-        // console.log($smallest)
-        // console.log(selectedDiscId)
-        $smallest.remove();
-        console.log($smallest); // if selected disc is smaller than top disc in the destination tower
+        $onDeck.removeClass("hold");
+        $onDeck.remove(); // if selected disc is smaller than top disc in the destination tower
         // recreate identical disc in new tower 
+
+        tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'));
       }
     } else if ($smallest.length !== 0) {
       $smallest.addClass("hold");
-      selectedDiscId = deck[0];
-      console.log(tower);
+      deck[0] = selectedDiscId;
+      console.log(deck[0]);
     }
   } // Click Events Ahoy
 
@@ -180,7 +178,7 @@ $(document).ready(function () {
     play($selectedTower);
   });
   $(".reset").click(function () {
-    gameStart($tower.eq(0));
+    buildTower($tower.eq(0));
   });
 });
 },{}],"../../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -210,7 +208,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64817" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49674" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -46,7 +46,7 @@ p {
 .tower {
     margin: 20px;
     min-width: 200px;
-    min-height: 210px;
+    min-height: 175px;
     background-color: $grey;
     border-bottom: 3px solid $black;
     display: flex;
@@ -74,7 +74,7 @@ button {
     content: '';
     justify-content: center;
 	list-style: none;
-	height: 20px;
+	height: 50px;
     display: block;
 	font-size: 0;
 	&.hold {
@@ -84,7 +84,7 @@ button {
 
 @for $i from 1 through 7 {
 	.disc-#{$i} {
-		width: 15px * $i;
+		width: 50px * $i;
         background-color: $pink;
     }
 }
