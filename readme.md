@@ -4,13 +4,16 @@
 First project of General Assembly's Web Development Intensive: Create a game using HTML, CSS, and JavaScript. I chose the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi). A game with three towers or rods and a minimum of three discs stacked from largest to smallest.
 
 __Game Requirements:__
-1. Only one disc moved at a time. :heavy_check_mark:
-2. Every move takes top disc from one stack and places on top of another. :heavy_check_mark:
-3. No disc can be put on top of a smaller disc. :heavy_check_mark:
+* Only one disc moved at a time. :ballot_box_with_check:
+* Every move takes top disc from one stack and places on top of another. :ballot_box_with_check:
+* No disc can be put on top of a smaller disc. :ballot_box_with_check:
 
 __Bonuses:__
-1. Add timer-based scoring. :x:
-2. Track scores across games (even if the page is reloaded). :x:
+* Add timer-based scoring. :x:
+* Track scores across games (even if the page is reloaded). :x:
+
+__Extras:__
+* You can 
 
 ## Technology Used: jQuery instead of Javascript
 Initially, the plan was to utilize HTML, CSS, and Javascript that we had been learning over the past three weeks in our web intensive. However, after discovering some (deceptively) easy code featuring jQuery--a language we have not and will not go over in class--I decided to pursue jquery as my DOM manipulator of choice.
@@ -39,3 +42,4 @@ This seemed perfect for setting up buttons to add and subtract discs to increase
 
 ## Unsolved Problems
 
+## For the Future
