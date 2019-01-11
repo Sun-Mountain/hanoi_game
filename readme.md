@@ -11,13 +11,18 @@ __Game Requirements:__
 
 :ballot_box_with_check: No disc can be put on top of a smaller disc.
 
+
 __Bonuses:__
-* Add timer-based scoring. :x:
-* Track scores across games (even if the page is reloaded). :x:
+
+:x: Add timer-based scoring.
+
+:x: Track scores across games (even if the page is reloaded).
 
 __Extras:__
-* Can add discs with a maximum of 7 :ballot_box_with_check:
-* Can remove discs with a minimum of 3 :ballot_box_with_check:
+
+:ballot_box_with_check: Can add discs with a maximum of 7
+
+:ballot_box_with_check: Can remove discs with a minimum of 3
 
 ## Technology Used: jQuery instead of Javascript
 Initially, the plan was to utilize HTML, CSS, and Javascript that we had been learning over the past three weeks in our web intensive. However, after discovering some (deceptively) easy code featuring jQuery--a language we have not and will not go over in class--I decided to pursue jquery as my DOM manipulator of choice.
@@ -59,7 +64,11 @@ https://sun-mountain.github.io/hanoi_game/
 Sometimes, when the player clicks too fast, it breaks the game to where you can't deselect the top disc immediately and then changes the width of future selected disc. Only fix currently is to refresh the page which will restart the game, forgetting all progress.
 
 ## For The Future
-* Make game layout mobile responsive. :o:
-* Add move counter. :o:
-* Add win scenario. :o:
-* Add timer. :o:
+
+:o: Make game layout mobile responsive.
+
+:o: Add move counter.
+
+:o: Add win scenario.
+
+:o: Add timer.
