@@ -4,9 +4,9 @@
 First project of General Assembly's Web Development Intensive: Create a game using HTML, CSS, and JavaScript. I chose the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi). A game with three towers or rods and a minimum of three discs stacked from largest to smallest.
 
 __Game Requirements:__
-* Only one disc moved at a time. :ballot_box_with_check:
-* Every move takes top disc from one stack and places on top of another. :ballot_box_with_check:
-* No disc can be put on top of a smaller disc. :ballot_box_with_check:
+:ballot_box_with_check: Only one disc moved at a time.
+:ballot_box_with_check: Every move takes top disc from one stack and places on top of another.
+:ballot_box_with_check: No disc can be put on top of a smaller disc.
 
 __Bonuses:__
 * Add timer-based scoring. :x:
@@ -42,6 +42,10 @@ This seemed perfect for setting up buttons to add and subtract discs to increase
 What ended up happening is a lot of extra work in translating javascript into jquery and jquery specific methods. The methods, when they worked, were much simpler to write. However, sometimes the logic did not exactly work the way I wanted it to.
 
 I consulted a friend who works as a webdeveloper specializing in javascript. In addition to helping me with my logic, her major note was that name naming of variables and functions needed to say what they are/do. I had named them vaguely and therefore and to go back and forth to remember what they did/responded to.
+
+After trial and error, I was able to get a working version of the game that I liked.
+
+Jimmy helped me with my final goal (being able to add and subtract )
 
 ## Play The Game
 ![ScreenShot](https://sun-mountain.github.io/hanoi_game/)
