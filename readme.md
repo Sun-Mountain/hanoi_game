@@ -1,7 +1,10 @@
 # Tower of ~~Death~~ Hanoi
 
+![ScreenShot](screenshot.png)
+
 ## What Is This?
 First project of General Assembly's Web Development Intensive: Create a game using HTML, CSS, and JavaScript. I chose the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi). A game with three towers or rods and a minimum of three discs stacked from largest to smallest.
+
 
 __Game Requirements:__
 
@@ -17,6 +20,7 @@ __Bonuses:__
 :x: Add timer-based scoring.
 
 :x: Track scores across games (even if the page is reloaded).
+
 
 __Extras:__
 
@@ -53,11 +57,11 @@ I consulted a friend who works as a webdeveloper specializing in javascript. In 
 
 After trial and error, I was able to get a working version of the game that I liked.
 
-Jimmy helped me with my final goal (being able to add and subtract )
+Jimmy helped me with my final goal (being able to add and subtract discs by pressing the button). I was able to add and subtract, but only by pressing the add/subtract buttons _then_ hitting the reset button. Now you can add and subtract and immediately see the result.
+
+Instead of `return discNum` after increasing the variable's value, I inserted the function that built the tower (`buildTower($tower.eq(0));`) which rebuilds the tower with the new number of discs immediately.
 
 ## Play The Game
-![ScreenShot](screenshot.png)
-
 https://sun-mountain.github.io/hanoi_game/
 
 ## Unsolved Problems
