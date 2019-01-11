@@ -1,6 +1,6 @@
 # Tower of ~~Death~~ Hanoi
 
-## What is it
+## What Is This?
 First project of General Assembly's Web Development Intensive: Create a game using HTML, CSS, and JavaScript. I chose the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi). A game with three towers or rods and a minimum of three discs stacked from largest to smallest.
 
 __Game Requirements:__
@@ -41,9 +41,15 @@ This seemed perfect for setting up buttons to add and subtract discs to increase
 
 What ended up happening is a lot of extra work in translating javascript into jquery and jquery specific methods. The methods, when they worked, were much simpler to write. However, sometimes the logic did not exactly work the way I wanted it to.
 
-## Unsolved Problems
+I consulted a friend who works as a webdeveloper specializing in javascript. In addition to helping me with my logic, her major note was that name naming of variables and functions needed to say what they are/do. I had named them vaguely and therefore and to go back and forth to remember what they did/responded to.
 
-## For the Future
+## Play The Game
+https://sun-mountain.github.io/hanoi_game/
+
+## Unsolved Problems
+Sometimes, when the player clicks too fast, it breaks the game to where you can't deselect the top disc immediately and then changes the width of future selected disc. Only fix currently is to refresh the page which will restart the game, forgetting all progress.
+
+## For The Future
 * Make game layout mobile responsive. :o:
 * Add move counter. :o:
 * Add win scenario. :o:
