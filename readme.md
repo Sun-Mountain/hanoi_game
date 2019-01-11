@@ -13,7 +13,8 @@ __Bonuses:__
 * Track scores across games (even if the page is reloaded). :x:
 
 __Extras:__
-* You can 
+* Can add discs with a maximum of 7 :ballot_box_with_check:
+* Can remove discs with a minimum of 3 :ballot_box_with_check:
 
 ## Technology Used: jQuery instead of Javascript
 Initially, the plan was to utilize HTML, CSS, and Javascript that we had been learning over the past three weeks in our web intensive. However, after discovering some (deceptively) easy code featuring jQuery--a language we have not and will not go over in class--I decided to pursue jquery as my DOM manipulator of choice.
@@ -36,7 +37,7 @@ With a handy little function written in jQuery:
 
 Source: http://api.jquery.com/prepend/
 
-This seemed perfect for setting up buttons to add and subtract discs to increase or decrease the difficulty level. (I arbitrarily set the maximum number of discs to seven.)
+This seemed perfect for setting up buttons to add and subtract discs to increase or decrease the difficulty level.
 
 ## Installation Instructions
 
