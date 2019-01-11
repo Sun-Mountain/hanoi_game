@@ -39,8 +39,12 @@ Source: http://api.jquery.com/prepend/
 
 This seemed perfect for setting up buttons to add and subtract discs to increase or decrease the difficulty level.
 
-## Installation Instructions
+What ended up happening is a lot of extra work in translating javascript into jquery and jquery specific methods. The methods, when they worked, were much simpler to write. However, sometimes the logic did not exactly work the way I wanted it to.
 
 ## Unsolved Problems
 
 ## For the Future
+* Make game layout mobile responsive. :o:
+* Add move counter. :o:
+* Add win scenario. :o:
+* Add timer. :o:
