@@ -56,7 +56,7 @@ After trial and error, I was able to get a working version of the game that I li
 Jimmy helped me with my final goal (being able to add and subtract )
 
 ## Play The Game
-![ScreenShot](https://sun-mountain.github.io/hanoi_game/)
+![ScreenShot](screenshot.png)
 
 https://sun-mountain.github.io/hanoi_game/
 
