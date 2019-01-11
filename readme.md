@@ -1,4 +1,4 @@
-# Tower of ~~Death~~ Hanoi
+# Tower of Hanoi
 
 ![ScreenShot](screenshot.png)
 
