@@ -4,8 +4,11 @@
 First project of General Assembly's Web Development Intensive: Create a game using HTML, CSS, and JavaScript. I chose the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi). A game with three towers or rods and a minimum of three discs stacked from largest to smallest.
 
 __Game Requirements:__
+
 :ballot_box_with_check: Only one disc moved at a time.
+
 :ballot_box_with_check: Every move takes top disc from one stack and places on top of another.
+
 :ballot_box_with_check: No disc can be put on top of a smaller disc.
 
 __Bonuses:__
