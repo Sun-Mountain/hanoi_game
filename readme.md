@@ -44,6 +44,8 @@ What ended up happening is a lot of extra work in translating javascript into jq
 I consulted a friend who works as a webdeveloper specializing in javascript. In addition to helping me with my logic, her major note was that name naming of variables and functions needed to say what they are/do. I had named them vaguely and therefore and to go back and forth to remember what they did/responded to.
 
 ## Play The Game
+![ScreenShot](https://sun-mountain.github.io/hanoi_game/)
+
 https://sun-mountain.github.io/hanoi_game/
 
 ## Unsolved Problems
