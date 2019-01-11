@@ -1,7 +1,7 @@
 // Game must:
-// [ ] Only one disc moved at a time
-// [ ] Every move takes top disc from one stack and places on top of another
-// [ ] No disc can be put on top of a smaller disc
+// [x] Only one disc moved at a time
+// [x] Every move takes top disc from one stack and places on top of another
+// [x] No disc can be put on top of a smaller disc
 
 // Bonus:
 // [ ] Time based scoring
@@ -29,14 +29,14 @@ $(document).ready(function() {
   $(".ad").click(function() {
     if (discNum < 7) {
       discNum++;
-      return discNum;
+      buildTower($tower.eq(0))
     }
   });
 
   $(".sub").click(function() {
     if (discNum > 3) {
       discNum--;
-      return discNum;
+      buildTower($tower.eq(0))
     }
   });
 
@@ -47,7 +47,7 @@ $(document).ready(function() {
   // Logic
 
   function play(tower) {
-    var $disc = tower.children(), /* list items */
+    var $discs = tower.children(), /* list items */
         $smallest = tower.find(":last-child"),
         selectedDiscId = $smallest.data("value"),
         $onDeck = $board.find(".hold");
@@ -57,22 +57,22 @@ $(document).ready(function() {
         // if there is a disc already selected
       if (selectedDiscId === deck[0]) {
         // deselect disk 
-        $onDeck.removeClass("hold"); 
+        $onDeck.removeClass("hold");
         // else if selectedDisc is < last child in new tower
-      } else if (selectedDiscId < $smallest) {
+      } else if (selectedDiscId === undefined || selectedDiscId >= deck[0]) {
           // remove disc from original tower
-          $onDeck.removeClass("hold");
-          $onDeck.remove()
+          $onDeck.remove();
           // if selected disc is smaller than top disc in the destination tower
           // recreate identical disc in new tower 
-				  tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'));
+          tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'))
       }
+
+      //if no disc is selected
     } else if ($smallest.length !== 0) {
       $smallest.addClass("hold");
       deck[0] = selectedDiscId;
-
-      console.log(deck[0])
     }
+    
   }
 
   // Click Events Ahoy
@@ -83,6 +83,7 @@ $(document).ready(function() {
   });
 
   $(".reset").click(function() {
+    // discNum = 3;
     buildTower($tower.eq(0));
   });
 });

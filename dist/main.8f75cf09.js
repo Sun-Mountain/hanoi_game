@@ -106,9 +106,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../js/main.js":[function(require,module,exports) {
 // Game must:
-// [ ] Only one disc moved at a time
-// [ ] Every move takes top disc from one stack and places on top of another
-// [ ] No disc can be put on top of a smaller disc
+// [x] Only one disc moved at a time
+// [x] Every move takes top disc from one stack and places on top of another
+// [x] No disc can be put on top of a smaller disc
 // Bonus:
 // [ ] Time based scoring
 // [ ] Track scores across games (even when reloading)
@@ -131,20 +131,20 @@ $(document).ready(function () {
   $(".ad").click(function () {
     if (discNum < 7) {
       discNum++;
-      return discNum;
+      buildTower($tower.eq(0));
     }
   });
   $(".sub").click(function () {
     if (discNum > 3) {
       discNum--;
-      return discNum;
+      buildTower($tower.eq(0));
     }
   }); //Create Game
 
   buildTower($tower.eq(0)); // Logic
 
   function play(tower) {
-    var $disc = tower.children(),
+    var $discs = tower.children(),
 
     /* list items */
     $smallest = tower.find(":last-child"),
@@ -157,18 +157,17 @@ $(document).ready(function () {
       if (selectedDiscId === deck[0]) {
         // deselect disk 
         $onDeck.removeClass("hold"); // else if selectedDisc is < last child in new tower
-      } else if (selectedDiscId < $smallest) {
+      } else if (selectedDiscId === undefined || selectedDiscId >= deck[0]) {
         // remove disc from original tower
-        $onDeck.removeClass("hold");
         $onDeck.remove(); // if selected disc is smaller than top disc in the destination tower
         // recreate identical disc in new tower 
 
         tower.append($('<li class="disc disc-' + deck[0] + '" data-value="' + deck[0] + '"></li>'));
-      }
+      } //if no disc is selected
+
     } else if ($smallest.length !== 0) {
       $smallest.addClass("hold");
       deck[0] = selectedDiscId;
-      console.log(deck[0]);
     }
   } // Click Events Ahoy
 
@@ -178,6 +177,7 @@ $(document).ready(function () {
     play($selectedTower);
   });
   $(".reset").click(function () {
+    // discNum = 3;
     buildTower($tower.eq(0));
   });
 });
@@ -208,11 +208,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58392" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49674" + '/');
->>>>>>> parent of ed83397... was able to recreate the tower
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58443" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
