@@ -1,4 +1,4 @@
-# Tower of ~~Death~~ Hanoi
+# Tower of Hanoi
 
 ![ScreenShot](screenshot.png)
 
@@ -57,7 +57,7 @@ I consulted a friend who works as a webdeveloper specializing in javascript. In 
 
 After trial and error, I was able to get a working version of the game that I liked.
 
-Jimmy helped me with my final goal (being able to add and subtract discs by pressing the button). I was able to add and subtract, but only by pressing the add/subtract buttons _then_ hitting the reset button. Now you can add and subtract and immediately see the result.
+An instructor helped me with my final goal (being able to add and subtract discs by pressing the button). Originally, I was able to add and subtract, but only by pressing the add/subtract buttons _then_ hitting the reset button. Now you can add and subtract and immediately see the result.
 
 Instead of `return discNum` after increasing the variable's value, I inserted the function that built the tower (`buildTower($tower.eq(0));`) which rebuilds the tower with the new number of discs immediately.
 
